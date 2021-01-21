@@ -32,25 +32,29 @@ common_tags = {
 This project is 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
 
 ## Providers
 
-| Name    | Version |
-| ------- | ------- |
-| azurerm | n/a     |
+| Name | Version |
+|------|---------|
+| azurerm | n/a |
 
 ## Inputs
 
-| Name        | Description         | Type     | Default                                               | Required |
-| ----------- | ------------------- | -------- | ----------------------------------------------------- | :------: |
-| common_tags | n/a                 | `map`    | <pre>{<br> "createdby": "James Woolfenden"<br>}</pre> |    no    |
-| dns_name    | n/a                 | `string` | n/a                                                   |   yes    |
-| location    | Azure Region to use | `string` | `"UK South"`                                          |    no    |
-| rg_name     | n/a                 | `string` | `"jamesdnstest"`                                      |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| group | Management group | `map(any)` | n/a | yes |
+| subscription\_ids | Associate Subscriptions with Group | `any` | `null` | no |
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| group | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
