@@ -42,6 +42,16 @@ No requirements.
 |------|---------|
 | azurerm | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [azurerm_management_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -55,7 +65,6 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | group | n/a |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
