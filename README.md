@@ -40,31 +40,31 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| azurerm | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [azurerm_management_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group) |
+| Name | Type |
+|------|------|
+| [azurerm_management_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| group | Management group | `map(any)` | n/a | yes |
-| subscription\_ids | Associate Subscriptions with Group | `any` | `null` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_group"></a> [group](#input\_group) | Management group | `map(any)` | n/a | yes |
+| <a name="input_subscription_ids"></a> [subscription\_ids](#input\_subscription\_ids) | Associate Subscriptions with Group | `any` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| group | n/a |
+| <a name="output_group"></a> [group](#output\_group) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
