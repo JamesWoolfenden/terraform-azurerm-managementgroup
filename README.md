@@ -67,6 +67,42 @@ No modules.
 | <a name="output_group"></a> [group](#output\_group) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
+<!-- BEGINNING OF PRE-COMMIT-PIKE DOCS HOOK -->
+The Terraform resource required is:
+
+```golang
+
+resource "azurerm_role_definition" "terraform_pike" {
+  role_definition_id = local.uuid
+  name               = "terraform_pike"
+  scope              = data.azurerm_subscription.primary.id
+
+  permissions {
+    actions = [
+    "Microsoft.Authorization/roleAssignments/delete",
+    "Microsoft.Authorization/roleAssignments/read",
+    "Microsoft.Authorization/roleAssignments/write",
+    "Microsoft.Management/managementGroups/*",
+    "Microsoft.Resources/subscriptions/providers/read"]
+    not_actions = []
+  }
+
+  assignable_scopes = [
+    data.azurerm_subscription.primary.id,
+  ]
+}
+
+locals {
+  uuid = uuid()
+}
+
+data "azurerm_subscription" "primary" {
+}
+
+
+```
+<!-- END OF PRE-COMMIT-PIKE DOCS HOOK -->
+
 ## Related Projects
 
 Check out these related projects.
@@ -120,11 +156,3 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
-[twitter]: https://twitter.com/JimWoolfenden
-[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-azurerm-managementgroup&url=https://github.com/JamesWoolfenden/terraform-azurerm-managementgroup
-[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-azurerm-managementgroup&url=https://github.com/JamesWoolfenden/terraform-azurerm-managementgroup
-[share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-azurerm-managementgroup
-[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/terraform-azurerm-managementgroup
-[share_email]: mailto:?subject=terraform-azurerm-managementgroup&body=https://github.com/JamesWoolfenden/terraform-azurerm-managementgroup
